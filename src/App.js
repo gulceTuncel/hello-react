@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import React from 'react';
+import Header from "./components/Header";
+
+const name = "Mehmet";
+const surname = "Seven";
+const isLoggedIn = true;
 
 function App() {
+  //  return React.createElement('div',null,"Hello");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <h1>Hello react</h1>
+     <Header/>
+     <Header/>
+     <Header/>
+     <p className='xyz'>lorem</p>
+
+     <label htmlFor='myInput'>
+      Name 
+      <input id='myInput'></input>
+     </label> */}
+
+      {/* Değişken Render Etme */}
+      {/* <h1>{name} {surname}</h1>
+     <h1>{`Benim adım ${name} ${surname}`}</h1> */}
+
+      {/* Conditional Rendering */}
+      {/* {isLoggedIn && `Benim adım ${name} ${surname}`}
+      <hr />
+      {isLoggedIn ? `Benim adım ${name} ${surname}` : `Giriş yapmadınız`} */}
+
+      
+    
+    
+    </>
   );
 }
 
