@@ -1,7 +1,7 @@
 import "./App.css";
 // import React from 'react';
 import Header from "./components/Header";
-
+import User from "./components/User";
 const name = "Mehmet";
 const surname = "Seven";
 const isLoggedIn = true;
@@ -30,7 +30,7 @@ function App() {
       <hr />
       {isLoggedIn ? `Benim adım ${name} ${surname}` : `Giriş yapmadınız`} */}
 
-      
+      <User name="Mehmet" surname="Seven" isLoggedIn={false}/>
     
     
     </>
