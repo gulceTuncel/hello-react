@@ -5,7 +5,24 @@ import User from "./components/User";
 const name = "Mehmet";
 const surname = "Seven";
 const isLoggedIn = true;
-
+const friends = [
+  {
+    id:1,
+    name:"Dila"
+  },
+  {
+    id:2,
+    name:"Cansu"
+  },
+  {
+    id:3,
+    name:"Oğulcan"
+  },
+  {
+    id:4,
+    name:"Deniz"
+  }
+]
 function App() {
   //  return React.createElement('div',null,"Hello");
   return (
@@ -30,7 +47,7 @@ function App() {
       <hr />
       {isLoggedIn ? `Benim adım ${name} ${surname}` : `Giriş yapmadınız`} */}
 
-      <User name="Mehmet" surname="Seven" isLoggedIn={false}/>
+      <User name="Mehmet" surname="Seven" isLoggedIn={false} age={29} friends={friends}/>
     
     
     </>
