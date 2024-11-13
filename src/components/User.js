@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const User = ({ name, surname, age, isLoggedIn, friends }) => {
+const User = ({ name, surname, age, isLoggedIn, friends, address }) => {
   return (
     <>
       <h1>
@@ -11,6 +11,7 @@ const User = ({ name, surname, age, isLoggedIn, friends }) => {
         {isLoggedIn ? `Selam ${name} ${surname}` : `Giriş yapmadınız`}
       </h1>
 
+{address.title} {address.zip}
       {/* {friends.map((friend, index) => (
         <div key={index}>{friend}</div>
       ))} */}
@@ -26,11 +27,28 @@ const User = ({ name, surname, age, isLoggedIn, friends }) => {
 };
 
 
-User.PropTypes = {
-    name: PropTypes.string,
-    surname: PropTypes.string,
-    isLoggedIn: PropTypes.bool,
-    friends: PropTypes.array,
-    age: PropTypes.number
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+  surname: PropTypes.string,
+  isLoggedIn: PropTypes.bool,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    })
+  ),
+  age: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]).isRequired,
+  address: PropTypes.shape({
+    title: PropTypes.string,
+    zip: PropTypes.number
+  })
 };
+
+User.defaultProps = {
+  isLoggedIn: false,
+  
+}
 export default User;

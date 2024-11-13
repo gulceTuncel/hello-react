@@ -47,7 +47,10 @@ function App() {
       <hr />
       {isLoggedIn ? `Benim adım ${name} ${surname}` : `Giriş yapmadınız`} */}
 
-      <User name="Mehmet" surname="Seven" isLoggedIn={false} age={29} friends={friends}/>
+      <User name="Mehmet" surname="Seven"  age={29} friends={friends} address={{
+        title:"Ataşehir",
+        zip: 606942
+      }}/>
     
     
     </>
