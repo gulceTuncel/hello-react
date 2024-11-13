@@ -2,6 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const User = ({ name, surname, age, isLoggedIn, friends, address }) => {
+  
+  {if(!isLoggedIn)
+    {
+      return <div>Giriş Yapmadınız</div>
+    }
+  }
   return (
     <>
       <h1>
@@ -49,6 +55,6 @@ User.propTypes = {
 
 User.defaultProps = {
   isLoggedIn: false,
-  
+  name: "Isimsiz"
 }
 export default User;
