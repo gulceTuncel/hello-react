@@ -8,15 +8,15 @@ const isLoggedIn = true;
 const friends = [
   {
     id:1,
-    name:"Dila"
+    name:"Ahmet"
   },
   {
     id:2,
-    name:"Cansu"
+    name:"Mehmet"
   },
   {
     id:3,
-    name:"Oğulcan"
+    name:"Ayşe"
   },
   {
     id:4,

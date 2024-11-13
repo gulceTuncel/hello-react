@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const User = ({ name, surname, age, isLoggedIn, friends }) => {
   return (
@@ -20,6 +21,16 @@ const User = ({ name, surname, age, isLoggedIn, friends }) => {
       ))}
     </>
   );
+
+  
 };
 
+
+User.PropTypes = {
+    name: PropTypes.string,
+    surname: PropTypes.string,
+    isLoggedIn: PropTypes.bool,
+    friends: PropTypes.array,
+    age: PropTypes.number
+};
 export default User;
